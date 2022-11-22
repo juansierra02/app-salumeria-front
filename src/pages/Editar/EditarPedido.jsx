@@ -42,7 +42,7 @@ const EditarPedido = () => {
 
     useEffect(() => {
         getPedidoById();
-    }, []);
+    });
 
     const getPedidoById = async () => {
         console.log(URI + id.id);
