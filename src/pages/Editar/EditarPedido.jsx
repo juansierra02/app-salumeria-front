@@ -55,7 +55,7 @@ const EditarPedido = () => {
 
     useEffect(() => {
         getPedidoById();
-    })
+    },[])
 
     return (
         <div className='container mb-3'>
