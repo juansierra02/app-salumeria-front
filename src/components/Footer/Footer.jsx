@@ -5,7 +5,7 @@ function Footer() {
     return (
         <Container
             fluid
-            className='footer-component bg-var-footer glass-effect pt-1 pb-2 '>
+            className='footer-component bg-var-footer glass-effect pt-1 pb-2 bg-dark'>
             <Container>
                 <Row className='py-1 my-4'>
                     <Col

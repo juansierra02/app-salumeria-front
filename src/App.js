@@ -9,7 +9,7 @@ import Login from "./components/Login/Login";
 import RutasPublicas from "./components/Rutas/RutasPublicas";
 import RutasPrivadas from "./components/Rutas/RutasPrivadas";
 import Logout from "./components/Rutas/Logout";
-import Footer from "./components/Footer/Footer2";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 function App() {
