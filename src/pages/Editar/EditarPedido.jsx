@@ -33,7 +33,7 @@ const EditarPedido = () => {
             cant_hueso_ahumado: huesoAhu,
             cant_bondiola_tender: bondiolaTender,
             cant_pastrami: pastrami
-        })
+        },[])
 
         navigate('/listarPedido')
     }

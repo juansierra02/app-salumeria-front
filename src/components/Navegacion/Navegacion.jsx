@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
+import { Link } from 'react-router-dom'
 
 const Navegacion = () => {
     return (
@@ -17,6 +18,7 @@ const Navegacion = () => {
                 <Nav className='me-auto'>
                     <Nav.Link href='/'>Inicio</Nav.Link>
                     <Nav.Link href='/CrearPedido'>Crear Pedido</Nav.Link>
+                    <Link to='/CrearPedido' className='text-reset'>Crear Pedido</Link>
                     <Nav.Link href='/ListarPedido'>Admin</Nav.Link>
                 </Nav>
             </Container>
