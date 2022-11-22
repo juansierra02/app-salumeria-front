@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 const URI = "https://app-salumeria-back.herokuapp.com/pedidos/";
 
@@ -17,36 +18,43 @@ const EditarPedido = () => {
     const [bondiolaTender, setBondiolaTender] = useState('')
     const [pastrami, SetPastrami] = useState('')
     const navigate = useNavigate()
-    const { id }   = useParams()
-//console.log(id.id);
+    const { id } = useParams()
 
 
-    const update = async (e) => {
+    const update = (e) => {
         e.preventDefault()
-        await axios.put(URI+id, {
-            nombre_cliente: nombre,
-            apellido_cliente: apellido,
-            numero_whatsapp: whatsapp,
-            calle_altura: calle,
-            piso_puerta: piso,
-            cant_chorizo_pollo: choriPollo,
-            cant_chorizo_cerdo: choriCerdo,
-            cant_chuleta_ahumada: chuletaAhu,
-            cant_hueso_ahumado: huesoAhu,
-            cant_bondiola_tender: bondiolaTender,
-            cant_pastrami: pastrami
+        Swal.fire({
+            title: 'Estás Seguro?',
+            text: "Se modificaran los datos del pedido!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, actualizar!',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axios.put(URI + id, {
+                    nombre_cliente: nombre,
+                    apellido_cliente: apellido,
+                    numero_whatsapp: whatsapp,
+                    calle_altura: calle,
+                    piso_puerta: piso,
+                    cant_chorizo_pollo: choriPollo,
+                    cant_chorizo_cerdo: choriCerdo,
+                    cant_chuleta_ahumada: chuletaAhu,
+                    cant_hueso_ahumado: huesoAhu,
+                    cant_bondiola_tender: bondiolaTender,
+                    cant_pastrami: pastrami
+                })
+                navigate('/listarPedido')
+                Swal.fire('Actualizado!', 'Los datos fueron actualizados', 'success')
+            }
         })
-
-        navigate('/listarPedido')
     }
-
-    useEffect(() => {
-        getPedidoById();
-    });
 
     const getPedidoById = async () => {
         console.log(URI + id.id);
-        const res = await axios.get(URI+id)
+        const res = await axios.get(URI + id)
         setNombre(res.data.nombre_cliente)
         setApellido(res.data.apellido_cliente)
         setWhatsapp(res.data.numero_whatsapp)
@@ -59,6 +67,10 @@ const EditarPedido = () => {
         setBondiolaTender(res.data.cant_bondiola_tender)
         SetPastrami(res.data.cant_pastrami)
     }
+
+    useEffect(() => {
+        getPedidoById()
+    }, [])
 
 
 
