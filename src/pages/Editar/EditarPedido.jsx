@@ -38,10 +38,6 @@ const EditarPedido = () => {
         navigate('/listarPedido')
     }
 
-    useEffect(() => {
-        getPedidoById()
-    }, [])
-
     const getPedidoById = async () => {
         const res = await axios.get(URI + id)
         setNombre(res.data.nombre_cliente)
@@ -56,6 +52,10 @@ const EditarPedido = () => {
         setBondiolaTender(res.data.cant_bondiola_tender)
         SetPastrami(res.data.cant_pastrami)
     }
+
+    useEffect(() => {
+        getPedidoById()
+    })
 
     return (
         <div className='container mb-3'>
