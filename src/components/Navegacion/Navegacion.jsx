@@ -18,8 +18,11 @@ const Navegacion = () => {
                 <Nav className='me-auto'>
                     <Nav.Link href='/'>Inicio</Nav.Link>
                     <Nav.Link href='/CrearPedido'>Crear Pedido</Nav.Link>
-                    <Link to='/CrearPedido' className='text-reset'>Crear Pedido</Link>
                     <Nav.Link href='/ListarPedido'>Admin</Nav.Link>
+
+                    <Link to='/'>Inicio</Link>
+                    <Link to='/CrearPedido'>Crear Pedido</Link>
+                    <Link to='/ListarPedido'>Admin</Link>
                 </Nav>
             </Container>
         </Navbar>
