@@ -12,6 +12,10 @@
     margin-top: auto;
 }
 
+.footer-contenedor{
+    margin:auto;
+}
+
 @media (min-width:768px) {
     .footer-logo {
         text-align: left;
@@ -20,7 +24,7 @@
     .footer-social {
 
     text-align: right;
-        
-       
+
+
     }
 }

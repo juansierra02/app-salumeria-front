@@ -17,11 +17,13 @@ const EditarPedido = () => {
     const [bondiolaTender, setBondiolaTender] = useState('')
     const [pastrami, SetPastrami] = useState('')
     const navigate = useNavigate()
-    const { id } = useParams()
+    const { id }   = useParams()
+//console.log(id.id);
+
 
     const update = async (e) => {
         e.preventDefault()
-        await axios.put(URI + id, {
+        await axios.put(URI+id, {
             nombre_cliente: nombre,
             apellido_cliente: apellido,
             numero_whatsapp: whatsapp,
@@ -33,13 +35,18 @@ const EditarPedido = () => {
             cant_hueso_ahumado: huesoAhu,
             cant_bondiola_tender: bondiolaTender,
             cant_pastrami: pastrami
-        },[])
+        })
 
         navigate('/listarPedido')
     }
 
+    useEffect(() => {
+        getPedidoById();
+    }, []);
+
     const getPedidoById = async () => {
-        const res = await axios.get(URI + id)
+        console.log(URI + id.id);
+        const res = await axios.get(URI+id)
         setNombre(res.data.nombre_cliente)
         setApellido(res.data.apellido_cliente)
         setWhatsapp(res.data.numero_whatsapp)
@@ -53,9 +60,7 @@ const EditarPedido = () => {
         SetPastrami(res.data.cant_pastrami)
     }
 
-    useEffect(() => {
-        getPedidoById();
-    },[])
+
 
     return (
         <div className='container mb-3'>
