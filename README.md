@@ -1,10 +1,14 @@
-# App Salumeria - Juan Augusto Sierra Baduy
+# App WEB Salumeria - Dev. Juan Augusto Sierra Baduy
 Esta es una pequeña Web, que permite realizar pedidos de productos a Salumeria Cumaná.
-esta conpuesta por 3 páginas, y un sistema de Login, usando un Back End creado en Node.js y el Fornt End en React.js.
-# Proyecto final para Optar a la Diplomatura Full Stack - UTN Programación Web Avanzado - 2022
+esta conpuesta por 3 páginas, sistema de Login, usando un Back End creado en Node.js y el Fornt End en React.js.
+# Proyecto final para Optar a la Diplomatura de Programación Web Full Stack - UTN Programación Web Avanzado - 2022
  - Inicio
  - Crear Pedido
  - Admin
+
+ ## El Admin puede entrar con estos datos.
+ User: admin
+ Password: 123
 
 # Getting Started with Create React App
 
