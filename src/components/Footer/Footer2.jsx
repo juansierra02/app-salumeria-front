@@ -10,28 +10,30 @@ const Footer2 = () => {
                     <nav className='row'>
                         <Link to='/' className='col-12 col-md-3 d-flex aling-items-center justyfy-content-center'>
                             <div className='footer-logo'>
-                                <img src='./logo192.png' alt='Logo' className='mx-2' height='150' />
+                                <p>
+                                    <img src='./logo192.png' alt='Logo' className='mx-2' height='150' />
+                                </p>
                             </div>
                         </Link>
                         <ul className='col-12 col-md-3 list-unstyled'>
-                            <li className='font-weight-bold mb-2'>Salumeria Cumaná</li>
+                            <li className='font-weight-bold mb-2 text-bg-primary'>Salumeria Cumaná</li>
                             <li className='text-center'> Lunes a Sábados de 10 a 20 hs. Domingos de 10 a 16 hs.
                                 Entregas a domicilio en el día. Se incluyen pedidos de hasta una hora antes del cierre. </li>
                         </ul>
                         <ul className='col-12 col-md-3 list-unstyled'>
-                            <li className='font-weight-bold mb-2'>Enlaces</li>
+                            <li className='font-weight-bold mb-2 text-bg-primary'>Enlaces</li>
                             <li>
-                                <Link to='/' className='text-reset'>Inicio</Link>
+                                <Link to='/' className='nav-link'>Inicio</Link>
                             </li>
                             <li>
-                                <Link to='/CrearPedido' className='text-reset'>Crear Pedido</Link>
+                                <Link to='/CrearPedido' className='nav-link'>Crear Pedido</Link>
                             </li>
                             <li>
-                                <Link to='/ListarPedido' className='text-reset'>Admin</Link>
+                                <Link to='/ListarPedido' className='nav-link'>Admin</Link>
                             </li>
                         </ul>
                         <ul className='col-12 col-md-3 list-unstyled'>
-                            <li className='font-weight-bold mb-2'>Siguenos</li>
+                            <li className='font-weight-bold mb-2 text-bg-primary'>Siguenos</li>
                             <li className='d-flex justify-content-between'>
                                 <i className='bi bi-facebook' />
                                 <i className='bi bi-instagram' />

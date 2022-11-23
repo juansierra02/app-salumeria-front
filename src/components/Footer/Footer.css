@@ -1,4 +1,5 @@
 .footer-logo {
+    width: 100vh;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -6,6 +7,7 @@
 .footer-social {
     margin-bottom: 20px;
     text-align: center;
+    text-size-adjust: inherit;
 }
 
 .footer-component {
@@ -14,7 +16,9 @@
 
 .footer-contenedor{
     margin:auto;
+    text-align: center;
 }
+
 
 @media (min-width:768px) {
     .footer-logo {
