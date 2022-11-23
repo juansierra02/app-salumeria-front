@@ -1,0 +1,7 @@
+.contenedor-crear-pedido{
+    min-height: calc(100vh - 76px - 238px);
+}
+
+.contenedor-crear-formulario{
+    padding-top: 0;
+}
