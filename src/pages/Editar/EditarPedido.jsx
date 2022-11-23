@@ -46,8 +46,8 @@ const EditarPedido = () => {
                     cant_bondiola_tender: bondiolaTender,
                     cant_pastrami: pastrami
                 })
-                navigate('/listarPedido')
                 Swal.fire('Actualizado!', 'Los datos fueron actualizados', 'success')
+                navigate('/listarPedido')
             }
         })
     }
