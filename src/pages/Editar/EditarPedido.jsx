@@ -21,7 +21,7 @@ const EditarPedido = () => {
     const { id } = useParams()
 
 
-    const update = (e) => {
+    const update =  (e) => {
         e.preventDefault()
         Swal.fire({
             title: 'Estás Seguro?',
@@ -33,7 +33,7 @@ const EditarPedido = () => {
             confirmButtonText: 'Si, actualizar!',
         }).then((result) => {
             if (result.isConfirmed) {
-                axios.put(URI + id, {
+                let datos =  axios.put(URI + id, {
                     nombre_cliente: nombre,
                     apellido_cliente: apellido,
                     numero_whatsapp: whatsapp,
@@ -46,6 +46,7 @@ const EditarPedido = () => {
                     cant_bondiola_tender: bondiolaTender,
                     cant_pastrami: pastrami
                 })
+                console.log(datos);
                 Swal.fire('Actualizado!', 'Los datos fueron actualizados', 'success')
                 navigate('/listarPedido')
             }
@@ -53,7 +54,6 @@ const EditarPedido = () => {
     }
 
     const getPedidoById = async () => {
-        console.log(URI + id.id);
         const res = await axios.get(URI + id)
         setNombre(res.data.nombre_cliente)
         setApellido(res.data.apellido_cliente)

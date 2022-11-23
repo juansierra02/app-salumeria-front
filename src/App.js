@@ -10,6 +10,8 @@ import RutasPublicas from "./components/Rutas/RutasPublicas";
 import RutasPrivadas from "./components/Rutas/RutasPrivadas";
 import Logout from "./components/Rutas/Logout";
 import Footer from "./components/Footer/Footer2";
+
+
 import "./App.css";
 
 function App() {
@@ -30,6 +32,10 @@ function App() {
                             element={<ListarPedido />}
                         />
                         <Route path="/logout" element={<Logout />} />
+                        <Route
+                            path="/listarpedido"
+                            element={<ListarPedido />}
+                        />
                     </Route>
                 </Routes>
                 <Footer />
